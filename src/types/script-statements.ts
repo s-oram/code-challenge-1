@@ -30,7 +30,7 @@ export interface CommentStatement {
 
 export interface SyntaxError {
     type: 'SYNTAX_ERROR';
-    line: number;
+    lineNumber: number; // The line number is one-indexed.
     text: string;
 }
 
