@@ -8,9 +8,6 @@ xdescribe('parseScript', () => {
             '',
             'MOVE',
             'REPORT',
-            '',
-            'EXPECTED 0,0,NORTH',
-            '',
             'UNKNOWN_COMMAND',
         ];
 
@@ -20,8 +17,7 @@ xdescribe('parseScript', () => {
             { type: 'COMMENT', text: 'Example A' },
             { type: 'MOVE_FORWARD' },
             { type: 'REPORT_POSITION' },
-            { type: 'EXPECTED_OUTPUT', x: 0, y: 0, facing: 'NORTH' },
-            { type: 'SYNTAX_ERROR', line: 8, text: 'UNKNOWN_COMMAND' },
+            { type: 'SYNTAX_ERROR', line: 5, text: 'UNKNOWN_COMMAND' },
         ];
 
         expect(scriptStatements).toEqual(expected);

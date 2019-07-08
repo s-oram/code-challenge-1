@@ -28,13 +28,6 @@ export interface CommentStatement {
     text: string;
 }
 
-export interface ExpectedOutputStatement {
-    type: 'EXPECTED_OUTPUT';
-    x: number;
-    y: number;
-    facing: EntityDirection;
-}
-
 export interface SyntaxError {
     type: 'SYNTAX_ERROR';
     line: number;
@@ -48,5 +41,4 @@ export type ScriptStatement =
     | RotateRightStatement
     | ReportPositionStatement
     | CommentStatement
-    | ExpectedOutputStatement
     | SyntaxError;
