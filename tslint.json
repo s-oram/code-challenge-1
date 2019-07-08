@@ -18,6 +18,7 @@
     "no-console": false,
     "no-empty-interface": false,
     "no-string-literal": false,
+    "no-namespace": false,
     "interface-name": false,
     "arrow-parens": false,
     "object-literal-sort-keys": false,
