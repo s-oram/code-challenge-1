@@ -2,6 +2,18 @@ import { UnreachableCaseError } from '../utils/unreachable-case-error';
 
 export type EntityDirection = 'NORTH' | 'SOUTH' | 'EAST' | 'WEST';
 
+export function isEntityDirection(value: any): value is EntityDirection {
+    switch (value) {
+        case 'NORTH':
+        case 'SOUTH':
+        case 'EAST':
+        case 'WEST':
+            return true;
+        default:
+            return false;
+    }
+}
+
 export interface EntityPosition {
     x: number;
     y: number;

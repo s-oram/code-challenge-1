@@ -14,7 +14,7 @@ describe('parseScript', () => {
         const scriptStatements = parseScript(script);
 
         const expected: ScriptStatement[] = [
-            { type: 'COMMENT', text: 'Example A' },
+            { type: 'COMMENT' },
             { type: 'MOVE_FORWARD' },
             { type: 'REPORT_POSITION' },
             { type: 'SYNTAX_ERROR', lineNumber: 5, text: 'UNKNOWN_COMMAND' },

@@ -25,7 +25,6 @@ export interface ReportPositionStatement {
 
 export interface CommentStatement {
     type: 'COMMENT';
-    text: string;
 }
 
 export interface SyntaxError {
