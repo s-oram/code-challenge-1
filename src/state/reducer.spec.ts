@@ -40,15 +40,19 @@ describe('Reducer', () => {
         let state: State;
 
         state = reduce(initialState(), { type: 'PLACE', x: 1, y: 2, facing: 'NORTH' });
+        state = reduce(state, { type: 'MOVE_FORWARD' });
         expect(state.robot.position).toEqual({ x: 1, y: 3, facing: 'NORTH' });
 
         state = reduce(initialState(), { type: 'PLACE', x: 1, y: 2, facing: 'SOUTH' });
+        state = reduce(state, { type: 'MOVE_FORWARD' });
         expect(state.robot.position).toEqual({ x: 1, y: 1, facing: 'SOUTH' });
 
         state = reduce(initialState(), { type: 'PLACE', x: 1, y: 2, facing: 'EAST' });
+        state = reduce(state, { type: 'MOVE_FORWARD' });
         expect(state.robot.position).toEqual({ x: 2, y: 2, facing: 'EAST' });
 
         state = reduce(initialState(), { type: 'PLACE', x: 1, y: 2, facing: 'WEST' });
+        state = reduce(state, { type: 'MOVE_FORWARD' });
         expect(state.robot.position).toEqual({ x: 0, y: 2, facing: 'WEST' });
     });
 
