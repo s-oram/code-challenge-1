@@ -37,6 +37,8 @@ export interface ExpectedOutputStatement {
 
 export interface SyntaxError {
     type: 'SYNTAX_ERROR';
+    line: number;
+    text: string;
 }
 
 export type ScriptStatement =
@@ -46,4 +48,5 @@ export type ScriptStatement =
     | RotateRightStatement
     | ReportPositionStatement
     | CommentStatement
+    | ExpectedOutputStatement
     | SyntaxError;
