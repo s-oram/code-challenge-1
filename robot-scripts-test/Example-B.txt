@@ -1,0 +1,7 @@
+// Example B
+
+PLACE 0,0,NORTH
+LEFT
+REPORT
+
+// Expected Output: 0,0,WEST
