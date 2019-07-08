@@ -1,7 +1,7 @@
 import { parseScript } from './parse-script';
 import { ScriptStatement } from '../types/script-statements';
 
-xdescribe('parseScript', () => {
+describe('parseScript', () => {
     it('should return an array of script statements', () => {
         const script = [
             '// Example A',
@@ -17,7 +17,7 @@ xdescribe('parseScript', () => {
             { type: 'COMMENT', text: 'Example A' },
             { type: 'MOVE_FORWARD' },
             { type: 'REPORT_POSITION' },
-            { type: 'SYNTAX_ERROR', line: 5, text: 'UNKNOWN_COMMAND' },
+            { type: 'SYNTAX_ERROR', lineNumber: 5, text: 'UNKNOWN_COMMAND' },
         ];
 
         expect(scriptStatements).toEqual(expected);
