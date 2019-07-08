@@ -2,7 +2,7 @@ import path from 'path';
 import { readScriptFile } from './read-script-file';
 
 describe('readScriptFile', () => {
-    fit('should return an array of strings', () => {
+    it('should return an array of strings', () => {
         const testDir = path.join(__dirname, '..', '..', 'robot-scripts-test');
         const testFile = path.join(testDir, 'Example-A.txt');
         const script = readScriptFile(testFile);
