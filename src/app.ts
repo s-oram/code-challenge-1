@@ -16,10 +16,7 @@ export class App {
         const statements = parseScript(script);
         const errors = statements.filter(x => x.type === 'SYNTAX_ERROR');
 
-        if (statements.length === 0) {
-            return 'The script was empty';
-
-        } else if (errors.length > 0) {
+        if (errors.length > 0) {
             const errorMessage = [
                 'Errors:',
                 ...errors.map(formatSyntaxErrorStatement).map(prependWhitespace(2)),
