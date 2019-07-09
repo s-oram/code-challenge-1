@@ -1,0 +1,8 @@
+// Example D: Script with syntax errors
+
+PLACE 0,0,NORTH
+MOVE
+UNKNOWN_COMMAND_A
+UNKNOWN_COMMAND_B
+REPORT
+
