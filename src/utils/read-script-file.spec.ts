@@ -3,8 +3,8 @@ import { readScriptFile } from './read-script-file';
 
 describe('readScriptFile', () => {
     it('should return an array of strings', () => {
-        const testDir = path.join(__dirname, '..', '..', 'robot-scripts-test');
-        const testFile = path.join(testDir, 'Example-A.txt');
+        const testDir = path.join(__dirname, '..', '..', 'test-data');
+        const testFile = path.join(testDir, 'test-script-a.txt');
         const script = readScriptFile(testFile);
         expect (script).toEqual([
             '// Example A',
