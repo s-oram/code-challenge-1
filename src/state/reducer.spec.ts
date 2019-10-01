@@ -5,7 +5,7 @@ import { tableWidth, tableHeight } from '../constants';
 
 describe('Reducer', () => {
 
-    it('PlaceCommand should place the robot on the table', () => {
+    it('PlaceCommand should place the pacman on the table', () => {
         const command: Command = { type: 'PLACE', x: 1, y: 2, facing: 'NORTH' };
         const state = reduce(initialState(), command);
         expect(state.pacman.position).toEqual({x: 1, y: 2, facing: 'NORTH' });
@@ -27,7 +27,7 @@ describe('Reducer', () => {
         expect(state).toEqual(state);
     });
 
-    it('Move commands issued while the robot is off the table should have no effect', () => {
+    it('Move commands issued while the pacman is off the table should have no effect', () => {
         let state = initialState();
         state = reduce(state, { type: 'MOVE_FORWARD' });
         state = reduce(state, { type: 'ROTATE_LEFT' });
@@ -36,7 +36,7 @@ describe('Reducer', () => {
         expect(state).toEqual(state);
     });
 
-    it('MoveForward command should move the robot', () => {
+    it('MoveForward command should move the pacman', () => {
         let state: State;
 
         state = reduce(initialState(), { type: 'PLACE', x: 1, y: 2, facing: 'NORTH' });
@@ -56,7 +56,7 @@ describe('Reducer', () => {
         expect(state.pacman.position).toEqual({ x: 0, y: 2, facing: 'WEST' });
     });
 
-    it('MoveForword command should not move the robot beyond the table bounds', () => {
+    it('MoveForword command should not move the pacman beyond the table bounds', () => {
         let state: State;
 
         state = reduce(initialState(), { type: 'PLACE', x: 0, y: 0, facing: 'SOUTH' });
@@ -68,7 +68,7 @@ describe('Reducer', () => {
         expect(state.pacman.position).toEqual({ x: 0, y: 0, facing: 'WEST' });
     });
 
-    it('RotateLeft command should rotate the robot', () => {
+    it('RotateLeft command should rotate the pacman', () => {
         let state: State;
 
         state = reduce(initialState(), { type: 'PLACE', x: 0, y: 0, facing: 'SOUTH' });
@@ -76,7 +76,7 @@ describe('Reducer', () => {
         expect(state.pacman.position).toEqual({ x: 0, y: 0, facing: 'EAST' });
     });
 
-    it('RotateRight command should rotate the robot', () => {
+    it('RotateRight command should rotate the pacman', () => {
         let state: State;
 
         state = reduce(initialState(), { type: 'PLACE', x: 0, y: 0, facing: 'SOUTH' });
