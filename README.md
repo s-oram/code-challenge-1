@@ -65,7 +65,7 @@ Questions, Problems
 
 Please give me a call or send an email if you have any questions! :)
 
-phone: 0468 311 806
+phone: 0468 311 806 <br>
 email: shannon.oram@gmail.com
 
 Thanks,
