@@ -1,93 +1,92 @@
-Toy Robot Simulator
-===================
+# Code-Challenge-1
 
-Description
+Code problem details:
+
 -----------
 
-- The application is a simulation of a toy robot moving on a square tabletop,
-  of dimensions 5 units x 5 units.
-- There are no other obstructions on the table surface.
-- The robot is free to roam around the surface of the table, but must be
-  prevented from falling to destruction. Any movement that would result in the
-  robot falling from the table must be prevented, however further valid
-  movement commands must still be allowed.
+Pacman Simulator
 
-Create an application that can read in commands of the following form:
+Description:
 
-    PLACE X,Y,F
-    MOVE
-    LEFT
-    RIGHT
-    REPORT
+- The application is a simulation of Pacman moving on in a grid, of dimensions 5 units x 5 units.
+- There are no other obstructions on the grid.
+- Pacman is free to roam around the surface of the grid, but must be prevented from moving off the grid. Any movement that would result in Pacman moving off the grid must  be prevented, however further valid movement commands must still be allowed.
+- Create an application that can read in commands of the following form -
 
-- PLACE will put the toy robot on the table in position X,Y and facing NORTH,
-  SOUTH, EAST or WEST.
-- The origin (0,0) can be considered to be the SOUTH WEST most corner.
-- The first valid command to the robot is a PLACE command, after that, any
-  sequence of commands may be issued, in any order, including another PLACE
-  command. The application should discard all commands in the sequence until
-  a valid PLACE command has been executed.
-- MOVE will move the toy robot one unit forward in the direction it is
-  currently facing.
-- LEFT and RIGHT will rotate the robot 90 degrees in the specified direction
-  without changing the position of the robot.
-- REPORT will announce the X,Y and F of the robot. This can be in any form,
-  but standard output is sufficient.
+```
+PLACE X,Y,F
 
-- A robot that is not on the table can choose the ignore the MOVE, LEFT, RIGHT
-  and REPORT commands.
+MOVE
+
+LEFT
+
+RIGHT
+
+REPORT
+```
+
+- PLACE will put the Pacman on the grid in positon X,Y and facing NORTH,SOUTH, EAST or WEST.
+- The origin (0,0) can be considered the SOUTH WEST most corner.
+- The first valid command to Pacman is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application should discard all commands in the sequence until a valid PLACE command has been executed.
+- MOVE will move Pacman one unit forward in the direction it is currently facing.
+- LEFT and RIGHT will rotate Pacman 90 degrees in the specified direction without changing the position of Pacman.
+- REPORT will announce the X,Y and F of Pacman. This can be in any form, but standard output is sufficient.
+- Pacman that is not on the grid can choose the ignore the MOVE, LEFT, RIGHT and REPORT commands.
 - Input can be from a file, or from standard input, as the developer chooses.
 - Provide test data to exercise the application.
 
-Constraints
------------
+**Constraints:**
 
-- The toy robot must not fall off the table during movement. This also
-  includes the initial placement of the toy robot.
-- Any move that would cause the robot to fall must be ignored.
+- Pacman must not move off the grid during movement. This also includes the initial placement of Pacman.
+- Any move that would cause Pacman to fall must be ignored.
 
-Example Input and Output
-------------------------
+Example Input and Output:
+```
+a)
+PLACE 0,0,NORTH
 
-### Example a
+MOVE
 
-    PLACE 0,0,NORTH
-    MOVE
-    REPORT
+REPORT
 
-Expected output:
+Output: 0,1,NORTH
+```
+```
+b)
 
-    0,1,NORTH
+PLACE 0,0,NORTH
 
-### Example b
+LEFT
 
-    PLACE 0,0,NORTH
-    LEFT
-    REPORT
+REPORT
 
-Expected output:
+Output: 0,0,WEST
+```
+```
+c)
 
-    0,0,WEST
+PLACE 1,2,EAST
 
-### Example c
+MOVE
 
-    PLACE 1,2,EAST
-    MOVE
-    MOVE
-    LEFT
-    MOVE
-    REPORT
+MOVE
 
-Expected output
+LEFT
 
-    3,3,NORTH
+MOVE
 
-Deliverables
-------------
+REPORT
 
-Please provide your source code, and any test code/data you using in
-developing your solution.
+Output: 3,3,NORTH
+```
 
-Please engineer your solution to a standard you consider suitable for
-production. It is not required to provide any graphical output showing the
-movement of the toy robot.
+**Deliverables:**
+- Spend as little or as much time as you like on the challenge.
+- The code you produce can be in any language
+- *It is not required to provide any graphical output* showing the movement of Pacman.
+- The output of the efforts *must be committed back into a Public Repo in Github* and the URL shared back for review.
+- Proving your code works via unit testing is highly encouraged
+
+
+
+
