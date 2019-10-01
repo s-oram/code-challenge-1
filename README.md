@@ -58,15 +58,3 @@ The `executeScript()` function:
 2. Parses the script into an array of statements.
 3. Checks for errors, returning a error message if found.
 4. Processes the script, returning when a `REPORT` command is encountered.
-
-
-Questions, Problems
--------------------
-
-Please give me a call or send an email if you have any questions! :)
-
-phone: 0468 311 806 <br>
-email: shannon.oram@gmail.com
-
-Thanks,<br>
-Shannon
