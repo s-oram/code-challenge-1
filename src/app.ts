@@ -27,7 +27,7 @@ export class App {
             for (const statement of statements) {
                 switch (statement.type) {
                     case 'REPORT_POSITION':
-                        return getRobotPosition(this._state);
+                        return getPacmanPosition(this._state);
 
                     case 'COMMENT':
                         // Do nothing.
@@ -65,8 +65,8 @@ const prependWhitespace = (count: number) => (value: string) => {
     return repeatStr(' ', count) + value;
 };
 
-const getRobotPosition = (state: State): string => {
+const getPacmanPosition = (state: State): string => {
     return state.pacman.position === null
-        ? 'Robot is not on table'
+        ? 'Pacman is not on table'
         : `${state.pacman.position.x},${state.pacman.position.y},${state.pacman.position.facing}`;
 };
