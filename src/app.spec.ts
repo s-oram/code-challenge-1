@@ -6,7 +6,7 @@ describe('Application', () => {
 
     it('should correctly process example A', () => {
 
-        const dir = path.join(__dirname, '..', 'robot-scripts');
+        const dir = path.join(__dirname, '..', 'pacman-scripts');
         const filename = path.join(dir, 'Example-A.txt');
 
         const app = new App();
@@ -17,7 +17,7 @@ describe('Application', () => {
 
     it('should correctly process example B', () => {
 
-        const dir = path.join(__dirname, '..', 'robot-scripts');
+        const dir = path.join(__dirname, '..', 'pacman-scripts');
         const filename = path.join(dir, 'Example-B.txt');
 
         const app = new App();
@@ -28,7 +28,7 @@ describe('Application', () => {
 
     it('should correctly process example C', () => {
 
-        const dir = path.join(__dirname, '..', 'robot-scripts');
+        const dir = path.join(__dirname, '..', 'pacman-scripts');
         const filename = path.join(dir, 'Example-C.txt');
 
         const app = new App();
@@ -39,7 +39,7 @@ describe('Application', () => {
 
     it('should correctly process example D', () => {
 
-        const dir = path.join(__dirname, '..', 'robot-scripts');
+        const dir = path.join(__dirname, '..', 'pacman-scripts');
         const filename = path.join(dir, 'Example-D.txt');
 
         const app = new App();
@@ -54,7 +54,7 @@ describe('Application', () => {
 
     it('should correctly process example E', () => {
 
-        const dir = path.join(__dirname, '..', 'robot-scripts');
+        const dir = path.join(__dirname, '..', 'pacman-scripts');
         const filename = path.join(dir, 'Example-E.txt');
 
         const app = new App();
