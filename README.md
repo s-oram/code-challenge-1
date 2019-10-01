@@ -1,14 +1,14 @@
-Toy Robot Simulator
-===================
+Pacman Simulator
+================
 
-This repository contains my answer to the Toy Robot Simulator coding challenge
-detailed in `PROBLEM.md`.
+This repository contains my answer to the coding challenge detailed
+in `PROBLEM.md`.
 
 The examples listed in the problem document have been extracted to:
 
-* ./robot-scripts/Example-A.txt
-* ./robot-scripts/Example-B.txt
-* ./robot-scripts/Example-C.txt
+* ./pacman-scripts/Example-A.txt
+* ./pacman-scripts/Example-B.txt
+* ./pacman-scripts/Example-C.txt
 
 The examples can be executed by running:
 
@@ -31,19 +31,19 @@ it doesn't provide a user interface.
 
 #### Script Extension: Comments
 
-Toy Robot Simulator scripts can contain comments. Lines beginning with a double
+Pacman Simulator scripts can contain comments. Lines beginning with a double
 forward slash `//` will be interpreted as a comment and ignored.
 
 
 #### Script Errors
 
-The Toy Robot Simulator will not run scripts with unknown commands or syntax
+The Pacman Simulator will not run scripts with unknown commands or syntax
 errors. All errors will be reported by the application with a line number.
 
 
 #### Invalid Place Commands
 
-The Toy Robot Simulator will ignore any PLACE commands if the specified location
+The Pacman Simulator will ignore any PLACE commands if the specified location
 is outside the bounds of the table.
 
 
