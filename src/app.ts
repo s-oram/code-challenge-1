@@ -66,7 +66,7 @@ const prependWhitespace = (count: number) => (value: string) => {
 };
 
 const getRobotPosition = (state: State): string => {
-    return state.robot.position === null
+    return state.pacman.position === null
         ? 'Robot is not on table'
-        : `${state.robot.position.x},${state.robot.position.y},${state.robot.position.facing}`;
+        : `${state.pacman.position.x},${state.pacman.position.y},${state.pacman.position.facing}`;
 };

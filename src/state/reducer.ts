@@ -29,7 +29,7 @@ export const reduce = (state: State, command: Command): State => {
             if (Table.isPositionInsideBounds(state.table, command.x, command.y)) {
                 return {
                     ...state,
-                    robot: {
+                    pacman: {
                         position: {
                             x: command.x,
                             y: command.y,
@@ -43,14 +43,14 @@ export const reduce = (state: State, command: Command): State => {
         }
 
         case 'MOVE_FORWARD': {
-            if (state.robot.position === null) {
+            if (state.pacman.position === null) {
                 return state;
             } else {
-                const newPosition = EntityPosition.moveForward(state.robot.position);
+                const newPosition = EntityPosition.moveForward(state.pacman.position);
                 if (Table.isPositionInsideBounds(state.table, newPosition.x, newPosition.y)) {
                     return {
                         ...state,
-                        robot: {
+                        pacman: {
                             position: newPosition,
                         },
                     };
@@ -61,13 +61,13 @@ export const reduce = (state: State, command: Command): State => {
         }
 
         case 'ROTATE_LEFT': {
-            if (state.robot.position === null) {
+            if (state.pacman.position === null) {
                 return state;
             } else {
-                const newPosition = EntityPosition.rotateLeft(state.robot.position);
+                const newPosition = EntityPosition.rotateLeft(state.pacman.position);
                 return {
                     ...state,
-                    robot: {
+                    pacman: {
                         position: newPosition,
                     },
                 };
@@ -75,13 +75,13 @@ export const reduce = (state: State, command: Command): State => {
         }
 
         case 'ROTATE_RIGHT': {
-            if (state.robot.position === null) {
+            if (state.pacman.position === null) {
                 return state;
             } else {
-                const newPosition = EntityPosition.rotateRight(state.robot.position);
+                const newPosition = EntityPosition.rotateRight(state.pacman.position);
                 return {
                     ...state,
-                    robot: {
+                    pacman: {
                         position: newPosition,
                     },
                 };

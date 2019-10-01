@@ -4,7 +4,7 @@ import { tableWidth, tableHeight } from '../constants';
 
 export interface State {
     table: Table;
-    robot: {
+    pacman: {
         position: null | EntityPosition;
     };
 }
@@ -15,7 +15,7 @@ export const initialState = (): State => {
             width: tableWidth,
             height: tableHeight,
         },
-        robot: {
+        pacman: {
             position: null,
         },
     };
