@@ -1,7 +1,7 @@
 {
-  "name": "toy_robot",
+  "name": "code_challenge_1",
   "version": "0.0.1",
-  "description": "Toy Robot coding challenge",
+  "description": "Pacman coding challenge",
   "scripts": {
     "start": "npm run test:watch",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
