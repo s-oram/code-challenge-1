@@ -9,18 +9,16 @@ import { EntityPosition } from '../types/entity';
 //
 // 1. The `Command` type here only represents user initiated actions, which obviously wouldn't
 //    be the case in a real application. Therefore, I would replace the `Command` type used
-//    here with a new `Action` type. User commands would be a subset of possible actions.
+//    here with a new `Action` type. User commands would be a subset of all possible actions.
 //
 // 2. The `state` value is an immutable value. I would consider using "Immer" to  ensure the
 //    `state` wasn't inadvertently modified.
 //    https://github.com/immerjs/immer
 //
-// 3. The toy robot commands are all synchronous & side-effect free, which makes it easy to
-//    write a reducer. A real application would likely include asynchrous actions and
-//    side effects. To make this kind of code easier to maintain I would consider looking
-//    at Redux and it's associated extensions or take inspiration from Elm or possibly Vue.
-//    * The Elm Architecture: https://guide.elm-lang.org/architecture/
-//    * Vuex Actions: https://vuex.vuejs.org/guide/actions.html
+// 3. The pacman commands are all synchronous & side-effect free, which makes it easy to
+//    write a reducer. A real application would likely include asynchronous actions and
+//    side effects. To make this kind of code easier to maintain I would consider using
+//    something similar to redux-thunk.
 
 export const reduce = (state: State, command: Command): State => {
 
